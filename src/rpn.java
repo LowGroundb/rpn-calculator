@@ -14,7 +14,9 @@ public class rpn {
         if((char)array[i]=='+'||(char)array[i]=='-'||(char)array[i]=='*'||(char)array[i]=='/'||(char)array[i]=='^')
             numCh++;
         }
-       
+       if(numNum!=numCh+1){
+        System.out.println("ta egrapses xalia");
+       }
     }
     
     
