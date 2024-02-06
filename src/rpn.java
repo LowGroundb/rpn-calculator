@@ -7,23 +7,8 @@ public class rpn {
        for(int i=0;i<n.length;i++){
         array[i]=n[i];
        }
-       //elegxos gia to an to input einai apodekto.
-       for(int i=0;i<array.length;i++){
-        if((int)array[i]>=0){
-            numNum++;
-        }
-        if((char)array[i]=='+'||(char)array[i]=='-'||(char)array[i]=='*'||(char)array[i]=='/'||(char)array[i]=='^')
-            numCh++;
-        }
-       if(numNum!=numCh+1){
-        System.out.println("ta egrapses xalia");
-        }
-       for(int i=0;i<array.length-1;i++){
-        if((int)array[1]>=0 && (int)array[i+1]>=0){
-
-        } 
-    
-        }
+       //elegxos gia to an to input einai apodekto.To eixa lathos opws fainetai
+       
 
 
 
