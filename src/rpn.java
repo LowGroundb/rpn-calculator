@@ -17,7 +17,7 @@ public class rpn {
         for(int i=0; i<n.length;i++){
             array[i]=n[i];
         }
-        Object[] temparray = new Object[5];
+        
        
         //
         if(array.length == 1 ){
@@ -27,12 +27,13 @@ public class rpn {
             
             if (array[i] instanceof Integer && array[i + 1] instanceof Integer && array[i + 2] instanceof Character && (char) array[i + 2] == '+') {
                 p=(int)array[i]+(int)array[i+1];
+                Object[] temparray = new Object[array.length-2];
                     for(int j=0;j<i;j++){
                         temparray[j]=array[j];
                     }
                     temparray[i]=p;
-                    for(int j=i;j<array.length-3;j++){
-                        temparray[j]=array[j];
+                    for(int j=i+3;j<array.length;j++){
+                        temparray[j-2]=array[j];
                 }
                     return calculator(temparray);
             }
