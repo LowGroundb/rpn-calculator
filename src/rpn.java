@@ -20,24 +20,24 @@ public class rpn {
         
        
         //
-        if(array.length == 1 ){
-            return (int)array[0];
+        if(n.length == 1 ){
+            return (int)n[0];
         }
-           for(int i=0;i<array.length-3;i++){
+           for(int i=0;i<n.length;i++){
             
-            if (array[i] instanceof Integer && array[i + 1] instanceof Integer && array[i + 2] instanceof Character && (char) array[i + 2] == '+') {
-                p=(int)array[i]+(int)array[i+1];
-                Object[] temparray = new Object[array.length-2];
+            if (n[i] instanceof Integer && n[i + 1] instanceof Integer && n[i + 2] instanceof Character && (char) n[i + 2] == '+') {
+                p=(int)n[i]+(int)n[i+1];
+                Object[] temparray = new Object[n.length-2];
                     for(int j=0;j<i;j++){
-                        temparray[j]=array[j];
+                        temparray[j]=n[j];
                     }
                     temparray[i]=p;
-                    for(int j=i+3;j<array.length;j++){
-                        temparray[j-2]=array[j];
+                    for(int j=i+3;j<n.length;j++){
+                        temparray[j-2]=n[j];
                 }
                     return calculator(temparray);
             }
-            if(array[i] instanceof Character && array[i+1] instanceof Character && ((char)array[i]=='+'||(char)array[i+1]=='+')){
+            if(n[i] instanceof Character && n[i+1] instanceof Character && ((char)n[i]=='+'||(char)n[i+1]=='+')){
                 System.out.println("your input is wrong");
                 break;
             }
@@ -48,7 +48,7 @@ public static void main(String[] args) throws Exception {
     Object[] test = new Object[5];
     test[0] = 1;
     test[1] = 1;
-    test[2] = 1;
+    test[2] = 12;
     test[3] = '+';
     test[4] = '+';
     System.out.println(test.length);
