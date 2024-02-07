@@ -14,17 +14,18 @@ public class rpn {
      
      int calculator(Object[] n){
         int p=0;
+        for(int i=0; i<n.length;i++){
+            array[i]=n[i];
+        }
         Object[] temparray = new Object[5];
+       
         //
         if(array.length == 1 ){
             return (int)array[0];
         }
            for(int i=0;i<array.length-3;i++){
-            if((char)array[i]=='+'||(char)array[i+1]=='+'){
-                System.out.println("your input is wrong");
-                break;
-            }
-            if ((int)array[i]>=0 && (int)array[i+1]>=0 && (char)array[i+2]=='+'){
+            
+            if (array[i] instanceof Integer && array[i + 1] instanceof Integer && array[i + 2] instanceof Character && (char) array[i + 2] == '+') {
                 p=(int)array[i]+(int)array[i+1];
                     for(int j=0;j<i;j++){
                         temparray[j]=array[j];
@@ -33,7 +34,11 @@ public class rpn {
                     for(int j=i;j<array.length-3;j++){
                         temparray[j]=array[j];
                 }
-                    calculator(temparray);
+                    return calculator(temparray);
+            }
+            if(array[i] instanceof Character && array[i+1] instanceof Character && ((char)array[i]=='+'||(char)array[i+1]=='+')){
+                System.out.println("your input is wrong");
+                break;
             }
     }
             return 0;
@@ -45,6 +50,8 @@ public static void main(String[] args) throws Exception {
     test[2] = 1;
     test[3] = '+';
     test[4] = '+';
+    System.out.println(test.length);
+    System.out.println(test[4] instanceof Integer);
     rpn peos = new rpn(5);
     int result = peos.calculator(test);
     System.out.println("Result: " + result);
