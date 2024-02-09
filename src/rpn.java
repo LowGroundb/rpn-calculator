@@ -1,3 +1,4 @@
+import java.util.Scanner;  
 public class rpn {
     private Object[] array;
     
@@ -9,12 +10,14 @@ public class rpn {
        }
     }
      
-     int calculator(Object[] n){
+     static int calculator(Object[] n){
         int p=0;
         
-        if(n.length == 1 ){
+        if(n.length == 1 && n[0] instanceof Integer ){
+           
             return (int)n[0];
         }
+        
            for(int i=0;i<n.length-2;i++){
             
             if (n[i] instanceof Integer && n[i + 1] instanceof Integer && n[i + 2] instanceof Character && ((char) n[i + 2] == '+' ||(char) n[i + 2] == '-'||(char) n[i + 2] == '*'||(char) n[i + 2] == '/'))  {
@@ -55,13 +58,9 @@ public class rpn {
 }
 public static void main(String[] args) throws Exception {
     Object[] test = new Object[5];
-    test[0] = 1;
-    test[1] = 1;
-    test[2] = 7;
-    test[3] = '/';
-    test[4] = '+';
+    test = new Object[1];
     System.out.println(test.length);
-    System.out.println(test[4] instanceof Integer);
+   
     rpn peos = new rpn(5);
     int result = peos.calculator(test);
     System.out.println("Result: " + result);
