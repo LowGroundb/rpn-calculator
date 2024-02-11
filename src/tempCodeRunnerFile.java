@@ -1,8 +1,8 @@
-public class rpn {
+public class tempCodeRunnerFile {
     private Object[] array;
     
     
-    public rpn(int n){
+    public tempCodeRunnerFile(int n){
         array = new Object[n];
        for(int i=0;i<n;i++){
         array[i]=0;
@@ -66,7 +66,7 @@ public static void main(String[] args) throws Exception {
     test[3] = 12;
     test[4] = '+';
     System.out.println(test.length);
-    rpn peos = new rpn(5);
+    tempCodeRunnerFile peos = new tempCodeRunnerFile(5);
     peos.setter(test);
     int result = peos.calculator();
     System.out.println("Result: " + result);

@@ -14,22 +14,22 @@ public class rpn {
         
         for(int i=0;i<array.length-2;i++){
             
-            if (array[i] instanceof Integer && array[i + 1] instanceof Integer && array[i + 2] instanceof Character)  {
+            if (array[i] instanceof Integer a && array[i + 1] instanceof Integer b && array[i + 2] instanceof Character)  {
                     //////////////////////////////symbol check/////////////////////////////////////
                     char operation = (char)array[i+2];
                     switch (operation) {
                         case '+':
-                            result = (int)array[i]+(int)array[i+1];
+                            result = a+b;
                             break;
                         case '-':
-                            result = (int)array[i]-(int)array[i+1];
+                            result = a-b;
                             break;
                         case '*':
-                            result = (int)array[i]*(int)array[i+1];
+                            result = a*b;
                             break;
                         case '/':
                             if((int)array[i+1]==0){System.out.println("division with 0 ");return 0;}
-                            result = (int)array[i]/(int)array[i+1];
+                            result = a/b;
                             break;
                     
                         default:
@@ -62,22 +62,5 @@ public class rpn {
         System.out.println("wrong input"); 
         return 0;
 }
-public static void main(String[] args) throws Exception {
-    Object[] test = new Object[11];
-    test[0] = 1;
-    test[1] = 0;
-    test[2] = '+';
-    test[3] = 1;
-    test[4] = 1;
-    test[5] = 1;
-    test[6] = '+';
-    test[7] = 1;
-    test[8] = '+';
-    test[9] = '+';
-    test[10] = '+';
-    rpn peos = new rpn(5);
-    peos.setObjects(test);
-    int result = peos.Calculator();
-    System.out.println("Result: " + result);
-}
+
 }
