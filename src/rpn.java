@@ -19,17 +19,17 @@ public class rpn {
                     char operation = (char)array[i+2];
                     switch (operation) {
                         case '+':
-                            result = a+b;
+                            result = (int)array[i]+(int)array[i+1];
                             break;
                         case '-':
-                            result = a-b;
+                            result = (int)array[i]-(int)array[i+1];
                             break;
                         case '*':
-                            result = a*b;
+                            result = (int)array[i]*(int)array[i+1];
                             break;
                         case '/':
                             if((int)array[i+1]==0){System.out.println("division with 0 ");return 0;}
-                            result = a/b;
+                            result = (int)array[i]/(int)array[i+1];
                             break;
                     
                         default:
