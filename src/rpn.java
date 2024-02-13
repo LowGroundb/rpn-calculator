@@ -14,22 +14,22 @@ public class rpn {
         
         for(int i=0;i<array.length-2;i++){
             
-            if (array[i] instanceof Integer a && array[i + 1] instanceof Integer b && array[i + 2] instanceof Character)  {
+            if (array[i] instanceof Integer  a && array[i + 1] instanceof Integer  b && array[i + 2] instanceof Character)  {
                     //////////////////////////////symbol check/////////////////////////////////////
                     char operation = (char)array[i+2];
                     switch (operation) {
                         case '+':
-                            result = (int)array[i]+(int)array[i+1];
+                            result = a+b;
                             break;
                         case '-':
-                            result = (int)array[i]-(int)array[i+1];
+                            result = a-b;
                             break;
                         case '*':
-                            result = (int)array[i]*(int)array[i+1];
+                            result = a*b;
                             break;
                         case '/':
-                            if((int)array[i+1]==0){System.out.println("division with 0 ");return 0;}
-                            result = (int)array[i]/(int)array[i+1];
+                            if(b==0){System.out.println("division with 0 ");return 0;}
+                            result = a/b;
                             break;
                     
                         default:
