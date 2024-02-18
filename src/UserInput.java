@@ -5,6 +5,7 @@ public class UserInput {
     public  String mathematicalExpresion="" ;
     public float result1=0;
 
+    
     public UserInput() {
         ArrayList<Object> mixedList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);

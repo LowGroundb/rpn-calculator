@@ -13,6 +13,7 @@ public class gui {
     private JLabel label1;
     private JLabel label2;
 
+    
 
     public gui(String mathematicExpresion , float result){
         initialize(mathematicExpresion,  result);

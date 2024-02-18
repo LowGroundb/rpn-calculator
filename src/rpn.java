@@ -11,6 +11,7 @@ public class rpn {
     float Calculator(){
         float result=0;
         
+        
         for(int i=0;i<array.length-2;i++){
             
             if (array[i] instanceof Float  a && array[i + 1] instanceof Float  b && array[i + 2] instanceof Character)  {

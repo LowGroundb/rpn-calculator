@@ -1,5 +1,6 @@
 import java.awt.EventQueue;
 
+
 public class Launcher {
     public static void main(String[] args) {
         UserInput userInput = new UserInput(); 
