@@ -9,11 +9,11 @@ public class rpn {
 
      
     float Calculator(){
-        int result=0;
+        float result=0;
         
         for(int i=0;i<array.length-2;i++){
             
-            if (array[i] instanceof Integer  a && array[i + 1] instanceof Integer  b && array[i + 2] instanceof Character)  {
+            if (array[i] instanceof Float  a && array[i + 1] instanceof Float  b && array[i + 2] instanceof Character)  {
                     //////////////////////////////symbol check/////////////////////////////////////
                     char operation = (char)array[i+2];
                     switch (operation) {
@@ -48,11 +48,11 @@ public class rpn {
                     break;
             }
     }
-        if(array.length == 1 && array[0] instanceof Integer ){return (int)array[0];}
+        if(array.length == 1 && array[0] instanceof Float ){return (float)array[0];}
         System.out.println("wrong input"); 
         return -999;
 }
-float creationOfNewArray(int resultOfExpresion, int indexOfArray){
+float creationOfNewArray(float resultOfExpresion, int indexOfArray){
     rpn tempRpnArray = new rpn(array.length-3);
     Object[] tempArray = new Object[array.length-2];
         

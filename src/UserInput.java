@@ -18,10 +18,10 @@ public class UserInput {
                     mixedList.add(userInput.charAt(0));
                 } else {
                     try {
-                        int intValue = Integer.parseInt(userInput);
-                        mixedList.add(intValue);
+                        float floatValue = Float.parseFloat(userInput);
+                        mixedList.add(floatValue);
                     } catch (NumberFormatException e) {
-                        System.out.println("Invalid input. Must be an integer or a single character.");
+                        System.out.println("Invalid input. Must be an number or a single character.");
                     }
                 }
             }
