@@ -8,7 +8,7 @@ public class rpn {
     public void setObjects(Object[] array){this.array = array;}
 
      
-    int Calculator(){
+    float Calculator(){
         int result=0;
         
         for(int i=0;i<array.length-2;i++){
@@ -33,7 +33,7 @@ public class rpn {
                     
                         default:
                         System.out.println("wrong input");
-                        return 0;
+                        return -999;
                             
                     }
                     ///////////////////////////////////////////////////////////////////
@@ -50,11 +50,9 @@ public class rpn {
     }
         if(array.length == 1 && array[0] instanceof Integer ){return (int)array[0];}
         System.out.println("wrong input"); 
-        System.out.println(array[0]);
-        System.out.println(array[1]);
-        return 0;
+        return -999;
 }
-int creationOfNewArray(int resultOfExpresion, int indexOfArray){
+float creationOfNewArray(int resultOfExpresion, int indexOfArray){
     rpn tempRpnArray = new rpn(array.length-3);
     Object[] tempArray = new Object[array.length-2];
         

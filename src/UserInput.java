@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInput {
+    public  String mathematicalExpresion="" ;
+    public float result1=0;
+
     public UserInput() {
         ArrayList<Object> mixedList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -25,11 +28,13 @@ public class UserInput {
             rpn mathematicExpression = new rpn(mixedList.size());
             Object[] mixedArray = mixedList.toArray();
             mathematicExpression.setObjects(mixedArray);
+           
             for (int i = 0; i < mixedArray.length; i++) {
-                System.out.println(mixedArray[i]);
-            }
-            int result = mathematicExpression.Calculator();
-            System.out.println("Result: " + result);
+                mathematicalExpresion += mixedArray[i] + " "; 
+                }
+          
+             result1 = mathematicExpression.Calculator();
+          
         } finally {
             if (scanner != null) {
                 scanner.close();
@@ -37,7 +42,5 @@ public class UserInput {
         }
     }
 
-    public static void main(String[] args) {
-        UserInput userInput = new UserInput();
-    }
+  
 }
