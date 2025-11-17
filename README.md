@@ -1,18 +1,22 @@
-## Getting Started
+# RPN Calculator (Java)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Another Reverse Polish Notation calculator implementation (stack-based). If this and `Rpn-Calculator-numero2` are similar, consider consolidating or documenting differences (features, performance, structure).
 
-## Folder Structure
+## Build and Run (generic)
+```bash
+javac -d bin $(find src -name "*.java")
+java -cp bin Main   # replace Main with your main class
+```
 
-The workspace contains two folders by default, where:
+## Examples
+```text
+3 4 +           => 7
+10 2 / 5 +      => 10
+2 3 4 * +       => 14
+```
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Roadmap
+- Consistent error handling (underflow, invalid tokens)
+- Unit tests
+- Benchmarks vs numero2 (if both stay)
+- Packaging (fat JAR or Gradle task)

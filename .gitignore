@@ -1,0 +1,20 @@
+# Java class files
+*.class
+
+# Build directories
+bin/
+out/
+target/
+
+# IDE settings
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# Logs and OS cruft
+*.log
+.DS_Store
+Thumbs.db
